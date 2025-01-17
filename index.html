@@ -547,32 +547,20 @@ document.addEventListener("DOMContentLoaded", () => {
 #business-card {
     text-align: center;
     margin: 20px auto;
-    max-width: 800px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .business-card-img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto;
-    margin-bottom: 10px;
-    border-radius: 10px; /* 圓角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    margin-bottom: 20px;
+    border-radius: 12px; /* 圓角效果 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 名片陰影效果 */
 }
 
 /* 分享按鈕區樣式 */
 #share-buttons {
     text-align: center;
     margin: 20px auto;
-    max-width: 800px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 #share-buttons p {
@@ -585,13 +573,13 @@ document.addEventListener("DOMContentLoaded", () => {
 .share-btns {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .share-btn {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -599,42 +587,34 @@ document.addEventListener("DOMContentLoaded", () => {
     width: 100%;
     height: auto;
     border-radius: 50%; /* 圓形圖標 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 圖標陰影 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 圖標陰影 */
 }
 
 .share-btn:hover {
     transform: scale(1.15); /* 懸停時放大 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 增強陰影 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
-    #business-card, #share-buttons {
-        padding: 15px;
-    }
-
     .share-btns {
         flex-wrap: wrap; /* 小螢幕按鈕換行 */
     }
 
     .share-btn {
-        width: 50px; /* 小螢幕縮小按鈕尺寸 */
-        height: 50px;
-    }
-
-    .share-btn img {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 40px; /* 小螢幕縮小按鈕尺寸 */
+        height: 40px;
     }
 }
 
 @media (max-width: 500px) {
-    .share-btn {
-        width: 40px;
-        height: 40px;
+    .business-card-img {
+        max-width: 100%; /* 小螢幕名片更寬 */
     }
 
-    .share-btn img {
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    .share-btn {
+        width: 35px;
+        height: 35px;
     }
 }
 </style>
