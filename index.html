@@ -577,32 +577,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </script>
 
-<style>
-/* 名片區樣式 */
+        <styles>
+/* 名片樣式 */
 #business-card {
     text-align: center;
     margin: 20px auto;
 }
 
 .business-card-img {
-    max-width: 90%;
+    max-width: 300px; /* 限制名片圖片最大寬度 */
+    width: 100%; /* 確保圖片響應式縮放 */
     height: auto;
     margin-bottom: 20px;
-    border-radius: 12px; /* 圓角效果 */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* 名片陰影效果 */
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    cursor: pointer; /* 鼠標變為可點擊狀態 */
+    transition: transform 0.3s ease; /* 點擊縮放效果 */
 }
 
-/* 分享按鈕區樣式 */
+.business-card-img:active {
+    transform: scale(1.05); /* 點擊時放大 */
+}
+
+/* 分享按鈕樣式 */
 #share-buttons {
     text-align: center;
-    margin: 20px auto;
-}
-
-#share-buttons p {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
+    margin: 10px auto;
 }
 
 .share-btns {
@@ -626,14 +626,14 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 .share-btn:hover {
-    transform: scale(1.15); /* 懸停時放大 */
+    transform: scale(1.1); /* 懸停時放大 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
 }
 
 /* 響應式設計 */
 @media (max-width: 768px) {
-    .share-btns {
-        flex-wrap: wrap; /* 小螢幕按鈕換行 */
+    .business-card-img {
+        max-width: 250px; /* 小螢幕上稍微縮小名片 */
     }
 
     .share-btn {
@@ -643,16 +643,16 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 @media (max-width: 500px) {
-    .business-card-img {
-        max-width: 100%; /* 小螢幕名片更寬 */
+    .share-btns {
+        flex-wrap: wrap; /* 小螢幕按鈕換行 */
     }
 
-    .share-btn {
-        width: 35px;
-        height: 35px;
+    .business-card-img {
+        max-width: 200px; /* 手機螢幕上進一步縮小名片 */
     }
 }
-</style>
+
+</stlyes>
                 
 
    <div class="transport-info">
