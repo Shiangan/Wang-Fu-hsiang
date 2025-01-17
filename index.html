@@ -539,7 +539,16 @@ document.addEventListener("DOMContentLoaded", () => {
         // 动态更新 Line 分享链接
         var lineShareLink = document.querySelector('.line-share-btn');
         lineShareLink.href = "https://line.me/R/msg/text/?" + encodedUrl;
-    });
+
+        // 防止名片圖片長按時顯示預設菜單
+    var cardImg = document.querySelector(".business-card-img");
+    if (cardImg) {
+        cardImg.addEventListener("contextmenu", function (e) {
+            e.preventDefault(); // 阻止右鍵菜單或長按行為
+        });
+    }
+});
+
 </script>
 
 <style>
