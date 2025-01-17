@@ -577,41 +577,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </script>
 
-        <style>
+<style>
 /* 名片樣式 */
 #business-card {
     text-align: center;
     margin: 20px auto;
 }
 
-
 .business-card-img {
-    max-width: 350px; /* 調整為更大的寬度 */
-    width: 100%;
+    max-width: 300px; /* 限制名片圖片最大寬度 */
+    width: 100%; /* 確保圖片響應式縮放 */
     height: auto;
     margin-bottom: 20px;
-    border-radius: var(--image-border-radius);
-    box-shadow: var(--box-shadow);
-    cursor: pointer;
-    transition: transform var(--transition-duration) ease;
+    border-radius: 10px; /* 圓角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    cursor: pointer; /* 鼠標變為可點擊狀態 */
+    transition: transform 0.3s ease; /* 點擊縮放效果 */
 }
 
-.business-card-img:hover {
-    transform: scale(var(--hover-scale));
+.business-card-img:active {
+    transform: scale(1.05); /* 點擊時放大 */
 }
 
-/* 響應式設計 */
-@media (max-width: 768px) {
-    .business-card-img {
-        max-width: 320px; /* 中型設備 (平板) 增加名片尺寸 */
-    }
-}
-
-@media (max-width: 500px) {
-    .business-card-img {
-        max-width: 280px; /* 小型設備 (手機) 增加名片尺寸 */
-    }
-｝
 /* 分享按鈕樣式 */
 #share-buttons {
     text-align: center;
@@ -642,31 +629,60 @@ document.addEventListener("DOMContentLoaded", () => {
     transform: scale(1.1); /* 懸停時放大 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
 }
-            
+
 /* 響應式設計 */
 @media (max-width: 768px) {
     .business-card-img {
-        max-width: 320px; /* 中型設備 (平板) 增加名片尺寸 */
-    }
-}
-
-@media (max-width: 500px) {
-    .business-card-img {
-        max-width: 300px; /* 小型設備 (手機) 增加名片尺寸 */
+        max-width: 250px; /* 小螢幕上稍微縮小名片 */
     }
 
     .share-btn {
         width: 40px; /* 小螢幕縮小按鈕尺寸 */
         height: 40px;
     }
+}
 
 @media (max-width: 500px) {
     .share-btns {
         flex-wrap: wrap; /* 小螢幕按鈕換行 */
     }
+
+    .business-card-img {
+        max-width: 200px; /* 手機螢幕上進一步縮小名片 */
+    }
 }
 
-</style>
+</stlye>
+                
+<div>
+   <div class="transport-info">
+    <h2 class="title">台北市懷愛館（第二殯儀館）</h2>
+    <p class="subtitle">懷恩專車＆停車資訊</p>
+
+    <!-- 圖片展示 -->
+    <div class="image-gallery">
+        <img src="image/交通00004.GIF" alt="S31" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00005.GIF" alt="S32" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00003.GIF" alt="S33" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00002.GIF" alt="S34" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00001.GIF" alt="S35" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00007.JPG" alt="搭車資訊" class="gallery-img" aria-label="搭車資訊">
+        <img src="image/交通00008.JPG" alt="交通指引" class="gallery-img" aria-label="交通指引">
+        <img src="image/交通00009.JPG" alt="指引圖" class="gallery-img" aria-label="指引圖">
+        <img src="image/交通00006.JPG" alt="停車資訊" class="gallery-img" aria-label="停車資訊">
+    </div>
+</div>
+
+<style>
+:root {
+    --primary-bg-color: #f9f9f9;
+    --title-color: #333;
+    --subtitle-color: #666;
+    --image-border-radius: 10px;
+    --hover-scale: 1.05;
+    --transition-duration: 0.3s;
+    --box-shadow: rgba(0, 0, 0, 0.1) 0 6px 12px;
+}
                 
 <div>
    <div class="transport-info">
