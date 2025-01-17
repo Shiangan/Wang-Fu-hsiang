@@ -629,11 +629,17 @@ document.addEventListener("DOMContentLoaded", () => {
     transform: scale(1.1); /* 懸停時放大 */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增強陰影 */
 }
-
+            
 /* 響應式設計 */
 @media (max-width: 768px) {
     .business-card-img {
-        max-width: 250px; /* 小螢幕上稍微縮小名片 */
+        max-width: 320px; /* 中型設備 (平板) 增加名片尺寸 */
+    }
+}
+
+@media (max-width: 500px) {
+    .business-card-img {
+        max-width: 280px; /* 小型設備 (手機) 增加名片尺寸 */
     }
 
     .share-btn {
@@ -645,10 +651,6 @@ document.addEventListener("DOMContentLoaded", () => {
 @media (max-width: 500px) {
     .share-btns {
         flex-wrap: wrap; /* 小螢幕按鈕換行 */
-    }
-
-    .business-card-img {
-        max-width: 200px; /* 手機螢幕上進一步縮小名片 */
     }
 }
 
