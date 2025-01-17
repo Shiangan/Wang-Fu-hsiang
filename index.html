@@ -584,21 +584,34 @@ document.addEventListener("DOMContentLoaded", () => {
     margin: 20px auto;
 }
 
+
 .business-card-img {
-    max-width: 300px; /* 限制名片圖片最大寬度 */
-    width: 100%; /* 確保圖片響應式縮放 */
+    max-width: 350px; /* 調整為更大的寬度 */
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
-    border-radius: 10px; /* 圓角效果 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-    cursor: pointer; /* 鼠標變為可點擊狀態 */
-    transition: transform 0.3s ease; /* 點擊縮放效果 */
+    border-radius: var(--image-border-radius);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: transform var(--transition-duration) ease;
 }
 
-.business-card-img:active {
-    transform: scale(1.05); /* 點擊時放大 */
+.business-card-img:hover {
+    transform: scale(var(--hover-scale));
 }
 
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .business-card-img {
+        max-width: 320px; /* 中型設備 (平板) 增加名片尺寸 */
+    }
+}
+
+@media (max-width: 500px) {
+    .business-card-img {
+        max-width: 280px; /* 小型設備 (手機) 增加名片尺寸 */
+    }
+｝
 /* 分享按鈕樣式 */
 #share-buttons {
     text-align: center;
